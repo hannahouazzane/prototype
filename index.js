@@ -29,6 +29,7 @@ app.listen(3001, () => {
 
 
 app.get("/response/:uuid", (req, res)=>{
+  console.log('I have recieved a request')
   const uuid = req.params.uuid;
   if(data[uuid]) {
     const responseData = JSON.stringify(data[uuid]); 
